@@ -1,0 +1,22 @@
+---
+- name: Set hostname
+  block:
+    - name: Set hostname using hostnamectl
+      ansible.builtin.hostname:
+        name: "{{ inventory_hostname }}"
+
+    # No longer required
+    # - name: Update /etc/hostname
+    #   ansible.builtin.copy:
+    #     content: "{{ inventory_hostname }}"
+    #     dest: /etc/hostname
+    #     owner: root
+    #     group: root
+    #     mode: '0644'
+
+    - name: Update /etc/hosts with new hostname
+      ansible.builtin.lineinfile:
+        path: /etc/hosts
+        regexp: '^127\.0\.1\.1'
+        line: "127.0.1.1\t{{ inventory_hostname }} {{ inventory_hostname.split('.')[0] }}"
+        state: present

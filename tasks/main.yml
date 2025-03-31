@@ -1,0 +1,26 @@
+---
+# tasks file for ./system_baseline/roles/system_base_settings
+- name: Set system hostname as per inventory hostname
+  ignore_errors: "{{ ansible_check_mode }}"
+  tags:
+    - system_base_settings
+    - set_hostname
+  ansible.builtin.import_tasks: system_hostname.ansible.yml
+- name: Set system locale
+  ignore_errors: "{{ ansible_check_mode }}"
+  tags:
+    - system_base_settings
+    - set_locale
+  ansible.builtin.import_tasks: system_locale.ansible.yml
+- name: Configure NTP
+  ignore_errors: "{{ ansible_check_mode }}"
+  tags:
+    - system_base_settings
+    - set_ntp
+  ansible.builtin.import_tasks: system_time_ntp.ansible.yml
+- name: Set system timezone
+  ignore_errors: "{{ ansible_check_mode }}"
+  tags:
+    - system_base_settings
+    - set_timezone
+  ansible.builtin.import_tasks: system_timezone.ansible.yml

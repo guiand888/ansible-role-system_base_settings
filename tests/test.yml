@@ -1,0 +1,5 @@
+- name: Test playbook
+  hosts: localhost
+  remote_user: root
+  roles:
+    - system_base_settings

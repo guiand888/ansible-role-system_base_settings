@@ -1,0 +1,7 @@
+---
+- name: Set system locale
+  block:
+    - name: Generate locale
+      community.general.locale_gen:
+        name: "{{ system_locale | default('en_SG.UTF-8') }}"
+        state: present

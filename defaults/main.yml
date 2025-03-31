@@ -1,0 +1,7 @@
+---
+# defaults file for ./system_baseline/roles/system_base_settings
+system_base_settings_system_locale: en_US.UTF-8
+system_base_settings_ntp_servers:
+  - 0.sg.pool.ntp.org
+  - 0.pool.ntp.org
+system_base_settings_timezone: Asia/Singapore
