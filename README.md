@@ -3,17 +3,17 @@ guiand888.system_base_settings
 
 # Purpose
 Baseline system configuration with:
-- Hostname Configuration
-- Locale Settings
-- Timezone Management
-- NTP Configuration with Chrony
+- Hostname Configuration  
+- Locale Settings  
+- Timezone Management  
+- NTP Configuration with Chrony  
 
 # Instructions
 
 ## Required Variables
-- `system_base_settings_timezone`: System timezone (default: Asia/Singapore)
-- `system_base_settings_ntp_servers`: List of NTP servers
-- `system_base_settings_system_locale`: System locale settings
+- `system_base_settings_timezone`: System timezone (default: Asia/Singapore)  
+- `system_base_settings_ntp_servers`: List of NTP servers  
+- `system_base_settings_system_locale`: System locale settings  
 
 ## Example Configuration
 ```yaml
@@ -34,6 +34,6 @@ system_base_settings_system_locale: en_US.UTF-8
 ```
 
 # Maintainers
-- Guillaume A.
+Guillaume A.
   - Contact: [mail@guillaumea.fr](mailto:mail@guillaumea.fr)
   - Blog: https://blog.guillaumea.fr
