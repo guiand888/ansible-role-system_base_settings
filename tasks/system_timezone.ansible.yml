@@ -2,4 +2,4 @@
   block:
     - name: Set timezone using timedatectl
       community.general.timezone:
-        name: "{{ system_base_settings_timezone }}"
+        name: "{{ timezone }}"
