@@ -2,7 +2,7 @@ guiand888.system_base_settings
 ===
 
 # Purpose
-Baseline system configuration with:
+Baseline system configuration with:  
 - Hostname Configuration  
 - Locale Settings  
 - Timezone Management  
